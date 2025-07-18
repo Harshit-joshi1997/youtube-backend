@@ -3,12 +3,14 @@
 // import { DB_NAME } from "./constants";
 import dotenv from 'dotenv'
 import connectDB from "./db/db.js";
+import express from 'express';
 
 
 dotenv.config({
-    path: './env'
+    path: './.env'
 })
 
+const app = express();
 
 connectDB()
 .then(()=>{
